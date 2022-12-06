@@ -151,9 +151,9 @@ async def get_playlist(event):
         cat = ""
         for num, item in enumerate(playl, 1):
             if item["stream"] == Stream.audio:
-                cat += f"{num}. ðŸ”‰  `{item['title']}`\n"
+                cat += f"{num}. 🔉  `{item['title']}`\n"
             else:
-                cat += f"{num}. ðŸ“º  `{item['title']}`\n"
+                cat += f"{num}. 📺  `{item['title']}`\n"
         await edit_delete(event, f"**Playlist:**\n\n{cat}\n**Enjoy the show**")
 
 
