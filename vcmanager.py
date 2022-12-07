@@ -34,7 +34,7 @@ async def parse_entity(entity):
     return await THANOSPRO.get_entity(entity)
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="vcstart",
     command=("vcstart", plugin_category),
     info={
@@ -62,7 +62,7 @@ async def start_vc(event):
         await edit_delete(event, "You should be chat admin to start vc", time=20)
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="vcend",
     command=("vcend", plugin_category),
     info={
@@ -85,7 +85,7 @@ async def end_vc(event):
         await edit_delete(event, "You should be chat admin to kill vc", time=20)
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="vcinv ?(.*)?",
     command=("vcinv", plugin_category),
     info={
@@ -125,7 +125,7 @@ async def inv_vc(event):
         return await edit_delete(event, "User is Already Invited", time=20)
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="vcinfo",
     command=("vcinfo", plugin_category),
     info={
@@ -156,7 +156,7 @@ async def info_vc(event):
     await edit_or_reply(event, grp_call)
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="vctitle?(.*)?",
     command=("vctitle", plugin_category),
     info={
@@ -179,7 +179,7 @@ async def title_vc(event):
     await edit_delete(event, f"VC title was changed to **{title}**")
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="vc(|un)mute ([\s\S]*)",
     command=("vcmute", plugin_category),
     info={
@@ -227,7 +227,7 @@ async def mute_vc(event):
     await edit_delete(event, f"{check}d users in Group Call")
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     command=("vcunmute", plugin_category),
     info={
         "header": "To unmute users on Voice Chat.",
