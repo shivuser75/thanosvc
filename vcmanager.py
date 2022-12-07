@@ -54,7 +54,7 @@ async def start_vc(event):
         await THANOSPRO(
             functions.phone.CreateGroupCallRequest(
                 peer=vc_chat,
-                title="Cat VC",
+                title="thanos music",
             )
         )
         await edit_delete(event, "Started Group Call")
