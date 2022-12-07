@@ -40,7 +40,7 @@ async def handler(_, update):
 ALLOWED_USERS = set()
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="joinvc ?(\S+)? ?(?:-as)? ?(\S+)?",
     command=("joinvc", plugin_category),
     info={
@@ -102,7 +102,7 @@ async def joinVoicechat(event):
     await edit_delete(event, out)
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="leavevc",
     command=("leavevc", plugin_category),
     info={
@@ -127,7 +127,7 @@ async def leaveVoicechat(event):
         await edit_delete(event, "Not yet joined any VC")
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="playlist",
     command=("playlist", plugin_category),
     info={
@@ -157,7 +157,7 @@ async def get_playlist(event):
         await edit_delete(event, f"**Playlist:**\n\n{cat}\n**Enjoy the show**")
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="vplay ?(-f)? ?([\S ]*)?",
     command=("vplay", plugin_category),
     info={
@@ -201,7 +201,7 @@ async def play_video(event):
         await edit_delete(event, resp, time=30)
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="play ?(-f)? ?([\S ]*)?",
     command=("play", plugin_category),
     info={
@@ -245,7 +245,7 @@ async def play_audio(event):
         await edit_delete(event, resp, time=30)
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="pause",
     command=("pause", plugin_category),
     info={
@@ -266,7 +266,7 @@ async def pause_stream(event):
     await edit_delete(event, res, time=30)
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="resume",
     command=("resume", plugin_category),
     info={
@@ -287,7 +287,7 @@ async def resume_stream(event):
     await edit_delete(event, res, time=30)
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="skip",
     command=("skip", plugin_category),
     info={
@@ -309,7 +309,7 @@ async def skip_stream(event):
 
 
 """
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="a(?:llow)?vc ?([\d ]*)?",
     command=("allowvc", plugin_category),
     info={
@@ -335,7 +335,7 @@ async def allowvc(event):
     return await edit_delete(event, "Added User to Allowed List")
 
 
-@THANOSPRO.rishabh_cmd(
+@THANOSPRO.cat_cmd(
     pattern="d(?:isallow)?vc ?([\d ]*)?",
     command=("disallowvc", plugin_category),
     info={
